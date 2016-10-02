@@ -1,0 +1,13 @@
+{
+  "name": "template-site-react",
+  "homepage": "https://github.com/willoliveira/template-site-react",
+  "authors": [
+    "Willian Gomes de Oliveira <willian.goliveira@outlook.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.3.2"
+  }
+}
