@@ -57,15 +57,15 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 172);
 	
-	var _mainComponent = __webpack_require__(/*! ./shared/main/main.component.jsx */ 236);
+	var _mainComponent = __webpack_require__(/*! ./shared/main/main.component.jsx */ 235);
 	
 	var _mainComponent2 = _interopRequireDefault(_mainComponent);
 	
-	var _homeComponent = __webpack_require__(/*! ./components/home/home.component.jsx */ 235);
+	var _homeComponent = __webpack_require__(/*! ./components/home/home.component.jsx */ 236);
 	
 	var _homeComponent2 = _interopRequireDefault(_homeComponent);
 	
-	var _bilingComponent = __webpack_require__(/*! ./components/biling/biling.component.jsx */ 243);
+	var _bilingComponent = __webpack_require__(/*! ./components/biling/biling.component.jsx */ 237);
 	
 	var _bilingComponent2 = _interopRequireDefault(_bilingComponent);
 	
@@ -89,7 +89,7 @@
 	
 	var _supportComponent2 = _interopRequireDefault(_supportComponent);
 	
-	var _setupComponent = __webpack_require__(/*! ./components/setup/setup.component.jsx */ 244);
+	var _setupComponent = __webpack_require__(/*! ./components/setup/setup.component.jsx */ 243);
 	
 	var _setupComponent2 = _interopRequireDefault(_setupComponent);
 	
@@ -27873,58 +27873,6 @@
 
 /***/ },
 /* 235 */
-/*!************************************************!*\
-  !*** ./app/components/home/home.component.jsx ***!
-  \************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Home = function (_Component) {
-		_inherits(Home, _Component);
-	
-		function Home() {
-			_classCallCheck(this, Home);
-	
-			return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
-		}
-	
-		_createClass(Home, [{
-			key: "render",
-			value: function render() {
-				return _react2.default.createElement(
-					"h1",
-					null,
-					"Home"
-				);
-			}
-		}]);
-	
-		return Home;
-	}(_react.Component);
-	
-	exports.default = Home;
-
-/***/ },
-/* 236 */
 /*!********************************************!*\
   !*** ./app/shared/main/main.component.jsx ***!
   \********************************************/
@@ -27976,7 +27924,11 @@
 							_react2.default.createElement(
 								"h1",
 								null,
-								"Home"
+								_react2.default.createElement(
+									_reactRouter.Link,
+									{ to: "/" },
+									"Home"
+								)
 							)
 						),
 						_react2.default.createElement(
@@ -28084,7 +28036,228 @@
 	exports.default = Main;
 
 /***/ },
-/* 237 */,
+/* 236 */
+/*!************************************************!*\
+  !*** ./app/components/home/home.component.jsx ***!
+  \************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Home = function (_Component) {
+		_inherits(Home, _Component);
+	
+		function Home() {
+			_classCallCheck(this, Home);
+	
+			//dados
+			var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this));
+	
+			_this.data = [{ lastName: "Oliveira", firstName: "Willian", email: "willian.goliveira@outlook.com", openTicket: "13", clientId: "312234", services: "3", status: "active" }, { lastName: "Lepiane", firstName: "Marina", email: "Marina.Lepiane@outlook.com", openTicket: "3", clientId: "123123", services: "2", status: "active" }, { lastName: "Evangelista", firstName: "Lucas", email: "Lucas.Evangelista@outlook.com", openTicket: "4", clientId: "43545", services: "1", status: "active" }, { lastName: "Correia", firstName: "Filipe", email: "Filipe.Correia@outlook.com", openTicket: "5", clientId: "23234", services: "3", status: "active" }, { lastName: "Silva", firstName: "Douglas", email: "Douglas.Silva@outlook.com", openTicket: "0", clientId: "0678657", services: "5", status: "active" }, { lastName: "Edamatsu", firstName: "Rodrigo", email: "Rodrigo.Edamatsu@outlook.com", openTicket: "1", clientId: "45678", services: "1", status: "active" }, { lastName: "Augusto", firstName: "Guilherme", email: "Guilherme.Augusto@outlook.com", openTicket: "3", clientId: "695767", services: "2", status: "active" }];
+			return _this;
+		}
+	
+		_createClass(Home, [{
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"div",
+					null,
+					_react2.default.createElement(
+						"div",
+						{ className: "row" },
+						_react2.default.createElement(
+							"nav",
+							{ className: "navbar navbar-default" },
+							_react2.default.createElement(
+								"div",
+								{ className: "container-fluid" },
+								_react2.default.createElement(
+									"ul",
+									{ className: "nav navbar-nav" },
+									_react2.default.createElement(
+										"li",
+										null,
+										_react2.default.createElement(
+											"a",
+											{ href: "#" },
+											_react2.default.createElement("span", { className: "glyphicon glyphicon-envelope", "aria-hidden": "true" })
+										)
+									),
+									_react2.default.createElement(
+										"li",
+										null,
+										_react2.default.createElement(
+											"a",
+											{ href: "#" },
+											_react2.default.createElement("span", { className: "glyphicon glyphicon-pencil", "aria-hidden": "true" })
+										)
+									),
+									_react2.default.createElement(
+										"li",
+										null,
+										_react2.default.createElement(
+											"a",
+											{ href: "#" },
+											_react2.default.createElement("span", { className: "glyphicon glyphicon-trash", "aria-hidden": "true" })
+										)
+									)
+								)
+							)
+						)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "row" },
+						_react2.default.createElement(
+							"table",
+							{ className: "table table-striped" },
+							_react2.default.createElement(
+								"thead",
+								null,
+								_react2.default.createElement(
+									"tr",
+									null,
+									_react2.default.createElement("th", null),
+									_react2.default.createElement("th", null),
+									_react2.default.createElement(
+										"th",
+										null,
+										"Last name"
+									),
+									_react2.default.createElement(
+										"th",
+										null,
+										"First name"
+									),
+									_react2.default.createElement(
+										"th",
+										null,
+										"E-mail"
+									),
+									_react2.default.createElement(
+										"th",
+										null,
+										"Open tickets"
+									),
+									_react2.default.createElement(
+										"th",
+										null,
+										"ID of clients"
+									),
+									_react2.default.createElement(
+										"th",
+										null,
+										"# of services"
+									),
+									_react2.default.createElement(
+										"th",
+										null,
+										"Status"
+									)
+								)
+							),
+							_react2.default.createElement(
+								"tbody",
+								null,
+								this.data.map(function (lineData, indexLine) {
+									return _react2.default.createElement(
+										"tr",
+										{ key: lineData.clientId },
+										_react2.default.createElement("td", null),
+										_react2.default.createElement("td", null),
+										Object.keys(lineData).map(function (elem, indexElem) {
+											return _react2.default.createElement(
+												"td",
+												{ key: indexElem },
+												lineData[elem]
+											);
+										})
+									);
+								})
+							)
+						)
+					)
+				);
+			}
+		}]);
+	
+		return Home;
+	}(_react.Component);
+	
+	exports.default = Home;
+
+/***/ },
+/* 237 */
+/*!****************************************************!*\
+  !*** ./app/components/biling/biling.component.jsx ***!
+  \****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Biling = function (_Component) {
+		_inherits(Biling, _Component);
+	
+		function Biling() {
+			_classCallCheck(this, Biling);
+	
+			return _possibleConstructorReturn(this, (Biling.__proto__ || Object.getPrototypeOf(Biling)).apply(this, arguments));
+		}
+	
+		_createClass(Biling, [{
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"h1",
+					null,
+					"Biling"
+				);
+			}
+		}]);
+	
+		return Biling;
+	}(_react.Component);
+	
+	exports.default = Biling;
+
+/***/ },
 /* 238 */
 /*!******************************************************!*\
   !*** ./app/components/clients/clients.component.jsx ***!
@@ -28346,58 +28519,6 @@
 
 /***/ },
 /* 243 */
-/*!****************************************************!*\
-  !*** ./app/components/biling/biling.component.jsx ***!
-  \****************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Biling = function (_Component) {
-		_inherits(Biling, _Component);
-	
-		function Biling() {
-			_classCallCheck(this, Biling);
-	
-			return _possibleConstructorReturn(this, (Biling.__proto__ || Object.getPrototypeOf(Biling)).apply(this, arguments));
-		}
-	
-		_createClass(Biling, [{
-			key: "render",
-			value: function render() {
-				return _react2.default.createElement(
-					"h1",
-					null,
-					"Biling"
-				);
-			}
-		}]);
-	
-		return Biling;
-	}(_react.Component);
-	
-	exports.default = Biling;
-
-/***/ },
-/* 244 */
 /*!**************************************************!*\
   !*** ./app/components/setup/setup.component.jsx ***!
   \**************************************************/

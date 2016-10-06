@@ -7,7 +7,7 @@ class Main extends Component {
 			<section className="container-fluid">
 				<section className="row">
 					<div className="col-md-2">
-						<h1>Home</h1>
+						<h1><Link to="/">Home</Link></h1>
 					</div>
 					<div className="col-md-10">
 						<h1>Title Page</h1>
