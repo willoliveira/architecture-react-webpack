@@ -42,7 +42,7 @@ html, body, #container, .container-fluid {
     font-size: 12px;
 }
 
-    #nav-menu .list-group-item:hover {
+    #nav-menu .list-group-item.active, #nav-menu .list-group-item:hover {
         background-color: #FFF;
         color: #000;
     }
@@ -80,4 +80,5 @@ html, body, #container, .container-fluid {
 
     .table td:last-child {
         padding-right: 50px;
-    }  
+    }
+    
