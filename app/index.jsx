@@ -47,14 +47,14 @@ import Setup 		from "./components/setup/setup.component.jsx";
 render(
 	<Router history={browserHistory}>
 		<Route component={Main}>
-			<Route path="/" component={Home}/>
-			<Route path="/biling" component={Biling}/>
-			<Route path="/clients" component={Clients}/>
-			<Route path="/dashboard" component={Dashboard}/>
-			<Route path="/messenger" component={Messenger}/>
-			<Route path="/reports" component={Reports}/>
-			<Route path="/support" component={Support}/>
-			<Route path="/setup" component={Setup}/>
+			<Route name="Home" path="/" component={Home}/>
+			<Route name="Biling" path="/biling" component={Biling}/>
+			<Route name="Clients" path="/clients" component={Clients}/>
+			<Route name="Dashboard" path="/dashboard" component={Dashboard}/>
+			<Route name="Messenger" path="/messenger" component={Messenger}/>
+			<Route name="Reports" path="/reports" component={Reports}/>
+			<Route name="Support" path="/support" component={Support}/>
+			<Route name="Setup" path="/setup" component={Setup}/>
 		</Route>
 	</Router>, 
 	document.getElementById('container')

@@ -65,31 +65,31 @@
 	
 	var _homeComponent2 = _interopRequireDefault(_homeComponent);
 	
-	var _bilingComponent = __webpack_require__(/*! ./components/biling/biling.component.jsx */ 237);
+	var _bilingComponent = __webpack_require__(/*! ./components/biling/biling.component.jsx */ 238);
 	
 	var _bilingComponent2 = _interopRequireDefault(_bilingComponent);
 	
-	var _clientsComponent = __webpack_require__(/*! ./components/clients/clients.component.jsx */ 238);
+	var _clientsComponent = __webpack_require__(/*! ./components/clients/clients.component.jsx */ 239);
 	
 	var _clientsComponent2 = _interopRequireDefault(_clientsComponent);
 	
-	var _dashboardComponent = __webpack_require__(/*! ./components/dashboard/dashboard.component.jsx */ 239);
+	var _dashboardComponent = __webpack_require__(/*! ./components/dashboard/dashboard.component.jsx */ 240);
 	
 	var _dashboardComponent2 = _interopRequireDefault(_dashboardComponent);
 	
-	var _messengerComponent = __webpack_require__(/*! ./components/messenger/messenger.component.jsx */ 240);
+	var _messengerComponent = __webpack_require__(/*! ./components/messenger/messenger.component.jsx */ 241);
 	
 	var _messengerComponent2 = _interopRequireDefault(_messengerComponent);
 	
-	var _reportsComponent = __webpack_require__(/*! ./components/reports/reports.component.jsx */ 241);
+	var _reportsComponent = __webpack_require__(/*! ./components/reports/reports.component.jsx */ 242);
 	
 	var _reportsComponent2 = _interopRequireDefault(_reportsComponent);
 	
-	var _supportComponent = __webpack_require__(/*! ./components/support/support.component.jsx */ 242);
+	var _supportComponent = __webpack_require__(/*! ./components/support/support.component.jsx */ 243);
 	
 	var _supportComponent2 = _interopRequireDefault(_supportComponent);
 	
-	var _setupComponent = __webpack_require__(/*! ./components/setup/setup.component.jsx */ 243);
+	var _setupComponent = __webpack_require__(/*! ./components/setup/setup.component.jsx */ 244);
 	
 	var _setupComponent2 = _interopRequireDefault(_setupComponent);
 	
@@ -134,14 +134,14 @@
 	  _react2.default.createElement(
 	    _reactRouter.Route,
 	    { component: _mainComponent2.default },
-	    _react2.default.createElement(_reactRouter.Route, { path: "/", component: _homeComponent2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: "/biling", component: _bilingComponent2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: "/clients", component: _clientsComponent2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: "/dashboard", component: _dashboardComponent2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: "/messenger", component: _messengerComponent2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: "/reports", component: _reportsComponent2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: "/support", component: _supportComponent2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: "/setup", component: _setupComponent2.default })
+	    _react2.default.createElement(_reactRouter.Route, { name: "Home", path: "/", component: _homeComponent2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { name: "Biling", path: "/biling", component: _bilingComponent2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { name: "Clients", path: "/clients", component: _clientsComponent2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { name: "Dashboard", path: "/dashboard", component: _dashboardComponent2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { name: "Messenger", path: "/messenger", component: _messengerComponent2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { name: "Reports", path: "/reports", component: _reportsComponent2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { name: "Support", path: "/support", component: _supportComponent2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { name: "Setup", path: "/setup", component: _setupComponent2.default })
 	  )
 	), document.getElementById('container'));
 	// <Route path="/cars" component={Car} data={data}/>
@@ -27926,7 +27926,7 @@
 								null,
 								_react2.default.createElement(
 									_reactRouter.Link,
-									{ to: "/" },
+									{ to: "/", activeClassName: "active" },
 									"Home"
 								)
 							)
@@ -27937,7 +27937,7 @@
 							_react2.default.createElement(
 								"h1",
 								null,
-								"Title Page"
+								this.props.children.props.route.name
 							)
 						)
 					),
@@ -27960,13 +27960,13 @@
 									{ className: "list-group" },
 									_react2.default.createElement(
 										_reactRouter.Link,
-										{ to: "/dashboard", className: "list-group-item" },
+										{ to: "/dashboard", className: "list-group-item", activeClassName: "active" },
 										_react2.default.createElement("span", { className: "badge" }),
 										"Dashboard"
 									),
 									_react2.default.createElement(
 										_reactRouter.Link,
-										{ to: "/messenger", className: "list-group-item" },
+										{ to: "/messenger", className: "list-group-item", activeClassName: "active" },
 										_react2.default.createElement(
 											"span",
 											{ className: "badge" },
@@ -27976,25 +27976,25 @@
 									),
 									_react2.default.createElement(
 										_reactRouter.Link,
-										{ to: "/clients", className: "list-group-item active" },
+										{ to: "/clients", className: "list-group-item", activeClassName: "active" },
 										_react2.default.createElement("span", { className: "badge" }),
 										"Clients"
 									),
 									_react2.default.createElement(
 										_reactRouter.Link,
-										{ to: "/biling", className: "list-group-item" },
+										{ to: "/biling", className: "list-group-item", activeClassName: "active" },
 										_react2.default.createElement("span", { className: "badge" }),
 										"Bilings / Orders"
 									),
 									_react2.default.createElement(
 										_reactRouter.Link,
-										{ to: "/support", className: "list-group-item" },
+										{ to: "/support", className: "list-group-item", activeClassName: "active" },
 										_react2.default.createElement("span", { className: "badge" }),
 										"Support"
 									),
 									_react2.default.createElement(
 										_reactRouter.Link,
-										{ to: "/reports", className: "list-group-item" },
+										{ to: "/reports", className: "list-group-item", activeClassName: "active" },
 										_react2.default.createElement(
 											"span",
 											{ className: "badge" },
@@ -28004,7 +28004,7 @@
 									),
 									_react2.default.createElement(
 										_reactRouter.Link,
-										{ to: "/setup", className: "list-group-item" },
+										{ to: "/setup", className: "list-group-item", activeClassName: "active" },
 										_react2.default.createElement("span", { className: "badge" }),
 										"Setup"
 									)
@@ -28054,6 +28054,10 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _searchBarComponent = __webpack_require__(/*! ../../shared/tableFilter/searchBar.component.jsx */ 245);
+	
+	var _searchBarComponent2 = _interopRequireDefault(_searchBarComponent);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -28071,11 +28075,24 @@
 			//dados
 			var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this));
 	
-			_this.data = [{ lastName: "Oliveira", firstName: "Willian", email: "willian.goliveira@outlook.com", openTicket: "13", clientId: "312234", services: "3", status: "active" }, { lastName: "Lepiane", firstName: "Marina", email: "Marina.Lepiane@outlook.com", openTicket: "3", clientId: "123123", services: "2", status: "active" }, { lastName: "Evangelista", firstName: "Lucas", email: "Lucas.Evangelista@outlook.com", openTicket: "4", clientId: "43545", services: "1", status: "active" }, { lastName: "Correia", firstName: "Filipe", email: "Filipe.Correia@outlook.com", openTicket: "5", clientId: "23234", services: "3", status: "active" }, { lastName: "Silva", firstName: "Douglas", email: "Douglas.Silva@outlook.com", openTicket: "0", clientId: "0678657", services: "5", status: "active" }, { lastName: "Edamatsu", firstName: "Rodrigo", email: "Rodrigo.Edamatsu@outlook.com", openTicket: "1", clientId: "45678", services: "1", status: "active" }, { lastName: "Augusto", firstName: "Guilherme", email: "Guilherme.Augusto@outlook.com", openTicket: "3", clientId: "695767", services: "2", status: "active" }];
+			var data = [{ lastName: "Oliveira", firstName: "Willian", email: "willian.goliveira@outlook.com", openTicket: "13", clientId: "312234", services: "3", status: "active" }, { lastName: "Lepiane", firstName: "Marina", email: "Marina.Lepiane@outlook.com", openTicket: "3", clientId: "123123", services: "2", status: "active" }, { lastName: "Evangelista", firstName: "Lucas", email: "Lucas.Evangelista@outlook.com", openTicket: "4", clientId: "43545", services: "1", status: "active" }, { lastName: "Lepiane", firstName: "Filipe", email: "Filipe.Correia@outlook.com", openTicket: "5", clientId: "23234", services: "3", status: "active" }, { lastName: "Silva", firstName: "Douglas", email: "Douglas.Silva@outlook.com", openTicket: "0", clientId: "0678657", services: "5", status: "active" }, { lastName: "Edamatsu", firstName: "Rodrigo", email: "Rodrigo.Edamatsu@outlook.com", openTicket: "1", clientId: "45678", services: "1", status: "active" }, { lastName: "Augusto", firstName: "Guilherme", email: "Guilherme.Augusto@outlook.com", openTicket: "3", clientId: "695767", services: "2", status: "active" }];
+			//
+			_this.state = {
+				filterText: "",
+				data: data
+			};
+			_this.setFilterText = _this.setFilterText.bind(_this);
 			return _this;
 		}
 	
 		_createClass(Home, [{
+			key: "setFilterText",
+			value: function setFilterText(text) {
+				this.setState({
+					filterText: text
+				});
+			}
+		}, {
 			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
@@ -28120,6 +28137,14 @@
 											_react2.default.createElement("span", { className: "glyphicon glyphicon-trash", "aria-hidden": "true" })
 										)
 									)
+								),
+								_react2.default.createElement(
+									"div",
+									{ className: "navbar-form navbar-right" },
+									_react2.default.createElement(_searchBarComponent2.default, {
+										filterText: this.state.filterText,
+										onUserInput: this.setFilterText
+									})
 								)
 							)
 						)
@@ -28127,74 +28152,10 @@
 					_react2.default.createElement(
 						"div",
 						{ className: "row" },
-						_react2.default.createElement(
-							"table",
-							{ className: "table table-striped" },
-							_react2.default.createElement(
-								"thead",
-								null,
-								_react2.default.createElement(
-									"tr",
-									null,
-									_react2.default.createElement("th", null),
-									_react2.default.createElement("th", null),
-									_react2.default.createElement(
-										"th",
-										null,
-										"Last name"
-									),
-									_react2.default.createElement(
-										"th",
-										null,
-										"First name"
-									),
-									_react2.default.createElement(
-										"th",
-										null,
-										"E-mail"
-									),
-									_react2.default.createElement(
-										"th",
-										null,
-										"Open tickets"
-									),
-									_react2.default.createElement(
-										"th",
-										null,
-										"ID of clients"
-									),
-									_react2.default.createElement(
-										"th",
-										null,
-										"# of services"
-									),
-									_react2.default.createElement(
-										"th",
-										null,
-										"Status"
-									)
-								)
-							),
-							_react2.default.createElement(
-								"tbody",
-								null,
-								this.data.map(function (lineData, indexLine) {
-									return _react2.default.createElement(
-										"tr",
-										{ key: lineData.clientId },
-										_react2.default.createElement("td", null),
-										_react2.default.createElement("td", null),
-										Object.keys(lineData).map(function (elem, indexElem) {
-											return _react2.default.createElement(
-												"td",
-												{ key: indexElem },
-												lineData[elem]
-											);
-										})
-									);
-								})
-							)
-						)
+						_react2.default.createElement(ContentTable, {
+							data: this.state.data,
+							filter: this.state.filterText
+						})
 					)
 				);
 			}
@@ -28203,10 +28164,131 @@
 		return Home;
 	}(_react.Component);
 	
+	var ContentTable = function (_Component2) {
+		_inherits(ContentTable, _Component2);
+	
+		function ContentTable() {
+			_classCallCheck(this, ContentTable);
+	
+			return _possibleConstructorReturn(this, (ContentTable.__proto__ || Object.getPrototypeOf(ContentTable)).apply(this, arguments));
+		}
+	
+		_createClass(ContentTable, [{
+			key: "render",
+			value: function render() {
+				var rows = this.props.data.filter(function (elem) {
+					return !this.props.filter || this.props.filter && (elem.firstName.toLowerCase().match(this.props.filter.toLowerCase()) || elem.lastName.toLowerCase().match(this.props.filter.toLowerCase()));
+				}.bind(this));
+				return _react2.default.createElement(
+					"table",
+					{ className: "table table-striped" },
+					_react2.default.createElement(
+						"thead",
+						null,
+						_react2.default.createElement(
+							"tr",
+							null,
+							_react2.default.createElement("th", null),
+							_react2.default.createElement("th", null),
+							_react2.default.createElement(
+								"th",
+								null,
+								"Last name"
+							),
+							_react2.default.createElement(
+								"th",
+								null,
+								"First name"
+							),
+							_react2.default.createElement(
+								"th",
+								null,
+								"E-mail"
+							),
+							_react2.default.createElement(
+								"th",
+								null,
+								"Open tickets"
+							),
+							_react2.default.createElement(
+								"th",
+								null,
+								"ID of clients"
+							),
+							_react2.default.createElement(
+								"th",
+								null,
+								"# of services"
+							),
+							_react2.default.createElement(
+								"th",
+								null,
+								"Status"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"tbody",
+						null,
+						rows.map(function (lineData, indexLine) {
+							return _react2.default.createElement(ContentTableRow, {
+								key: lineData.clientId,
+								data: lineData,
+								filter: this.props.filterText
+							});
+						}.bind(this))
+					)
+				);
+			}
+		}]);
+	
+		return ContentTable;
+	}(_react.Component);
+	
+	var ContentTableRow = function (_Component3) {
+		_inherits(ContentTableRow, _Component3);
+	
+		function ContentTableRow() {
+			_classCallCheck(this, ContentTableRow);
+	
+			return _possibleConstructorReturn(this, (ContentTableRow.__proto__ || Object.getPrototypeOf(ContentTableRow)).apply(this, arguments));
+		}
+	
+		_createClass(ContentTableRow, [{
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"tr",
+					null,
+					_react2.default.createElement(
+						"td",
+						null,
+						_react2.default.createElement("input", { type: "checkbox" })
+					),
+					_react2.default.createElement(
+						"td",
+						null,
+						_react2.default.createElement("img", null)
+					),
+					Object.keys(this.props.data).map(function (elem, indexElem) {
+						return _react2.default.createElement(
+							"td",
+							{ key: indexElem },
+							this.props.data[elem]
+						);
+					}.bind(this))
+				);
+			}
+		}]);
+	
+		return ContentTableRow;
+	}(_react.Component);
+	
 	exports.default = Home;
 
 /***/ },
-/* 237 */
+/* 237 */,
+/* 238 */
 /*!****************************************************!*\
   !*** ./app/components/biling/biling.component.jsx ***!
   \****************************************************/
@@ -28247,7 +28329,7 @@
 				return _react2.default.createElement(
 					"h1",
 					null,
-					"Biling"
+					"Biling Page"
 				);
 			}
 		}]);
@@ -28258,7 +28340,7 @@
 	exports.default = Biling;
 
 /***/ },
-/* 238 */
+/* 239 */
 /*!******************************************************!*\
   !*** ./app/components/clients/clients.component.jsx ***!
   \******************************************************/
@@ -28299,7 +28381,7 @@
 				return _react2.default.createElement(
 					"h1",
 					null,
-					"Clients"
+					"Clients Page"
 				);
 			}
 		}]);
@@ -28310,7 +28392,7 @@
 	exports.default = Clients;
 
 /***/ },
-/* 239 */
+/* 240 */
 /*!**********************************************************!*\
   !*** ./app/components/dashboard/dashboard.component.jsx ***!
   \**********************************************************/
@@ -28351,7 +28433,7 @@
 				return _react2.default.createElement(
 					"h1",
 					null,
-					"Dashboard"
+					"Dashboard Page"
 				);
 			}
 		}]);
@@ -28362,7 +28444,7 @@
 	exports.default = Dashboard;
 
 /***/ },
-/* 240 */
+/* 241 */
 /*!**********************************************************!*\
   !*** ./app/components/messenger/messenger.component.jsx ***!
   \**********************************************************/
@@ -28403,7 +28485,7 @@
 				return _react2.default.createElement(
 					"h1",
 					null,
-					"Messenger"
+					"Messenger Page"
 				);
 			}
 		}]);
@@ -28414,7 +28496,7 @@
 	exports.default = Messenger;
 
 /***/ },
-/* 241 */
+/* 242 */
 /*!******************************************************!*\
   !*** ./app/components/reports/reports.component.jsx ***!
   \******************************************************/
@@ -28455,7 +28537,7 @@
 				return _react2.default.createElement(
 					"h1",
 					null,
-					"Report"
+					"Report Page"
 				);
 			}
 		}]);
@@ -28466,7 +28548,7 @@
 	exports.default = Report;
 
 /***/ },
-/* 242 */
+/* 243 */
 /*!******************************************************!*\
   !*** ./app/components/support/support.component.jsx ***!
   \******************************************************/
@@ -28518,7 +28600,7 @@
 	exports.default = Support;
 
 /***/ },
-/* 243 */
+/* 244 */
 /*!**************************************************!*\
   !*** ./app/components/setup/setup.component.jsx ***!
   \**************************************************/
@@ -28559,7 +28641,7 @@
 				return _react2.default.createElement(
 					"h1",
 					null,
-					"Setup"
+					"Setup Page"
 				);
 			}
 		}]);
@@ -28568,6 +28650,83 @@
 	}(_react.Component);
 	
 	exports.default = Setup;
+
+/***/ },
+/* 245 */
+/*!********************************************************!*\
+  !*** ./app/shared/tableFilter/searchBar.component.jsx ***!
+  \********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var SearchBar = function (_Component) {
+	    _inherits(SearchBar, _Component);
+	
+	    function SearchBar() {
+	        _classCallCheck(this, SearchBar);
+	
+	        var _this = _possibleConstructorReturn(this, (SearchBar.__proto__ || Object.getPrototypeOf(SearchBar)).call(this));
+	
+	        _this.onChangeFilter = _this.onChangeFilter.bind(_this);
+	        return _this;
+	    }
+	
+	    _createClass(SearchBar, [{
+	        key: "onChangeFilter",
+	        value: function onChangeFilter(evt) {
+	            // console.log(this);
+	            // console.log(this.refs.filterText.value);
+	            console.log(this.refs.filterText.value);
+	
+	            this.props.onUserInput(evt.target.value);
+	        }
+	    }, {
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "form",
+	                { className: "input-group" },
+	                _react2.default.createElement(
+	                    "span",
+	                    { className: "input-group-btn" },
+	                    _react2.default.createElement(
+	                        "button",
+	                        { className: "btn btn-default", type: "button" },
+	                        _react2.default.createElement("span", { className: "glyphicon glyphicon-search", "aria-hidden": "true" })
+	                    )
+	                ),
+	                _react2.default.createElement("input", { type: "text", className: "form-control", placeholder: "Search for...",
+	                    value: this.props.filterText,
+	                    ref: "filterText",
+	                    onChange: this.onChangeFilter.bind(this)
+	                })
+	            );
+	        }
+	    }]);
+	
+	    return SearchBar;
+	}(_react.Component);
+	
+	exports.default = SearchBar;
 
 /***/ }
 /******/ ]);

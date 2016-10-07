@@ -3,7 +3,7 @@ import React, {Component} from "react";
 class Biling extends Component {
 	render() {
 		return (
-			<h1>Biling</h1>
+			<h1>Biling Page</h1>
 		);
 	}
 }
