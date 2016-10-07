@@ -4,18 +4,18 @@ import { Link } from "react-router"
 class Main extends Component {
 	render() {
 		return (
-			<section className="container-fluid">
-				<section className="row">
-					<div className="col-md-2">
+			<section className="container-fluid">				
+				<section id="header-site" className="row">
+					<div id="header-logo" className="col-md-2">
 						<h1><Link to="/" activeClassName="active">Home</Link></h1>
 					</div>
-					<div className="col-md-10">
+					<div id="" className="col-md-10">
 						<h1>{this.props.children.props.route.name}</h1>
 					</div>
 				</section>
-				<section className="row">
-					<section className="col-md-2">
-						<h3>Main</h3>
+				<section id="body-site" className="row">
+					<section id="nav-menu" className="col-md-2">
+						<h3 className="title-menu" >Main</h3>
 						<nav>
 							<div className="list-group">
 								<Link to="/dashboard" className="list-group-item" activeClassName="active">

@@ -31,7 +31,7 @@ class Home extends Component {
 	
 	render() {
 		return (
-			<div>
+			<div id="home-content" className="col-md-12">
 				<div className="row">
 					<nav className="navbar navbar-default">
 						<div className="container-fluid">
