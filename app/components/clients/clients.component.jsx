@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import SearchBar from "../../shared/tableFilter/searchBar.component.jsx";
+import ContentTable from "../../shared/tableFilter/contentTable.component.jsx";
 
 class Clients extends Component {
 
@@ -31,7 +32,7 @@ class Clients extends Component {
 	
 	render() {
 		return (
-			<div id="home-content" className="col-md-12">
+			<div id="home-content" className="col-sm-12">
 				<div className="row">
 					<nav className="navbar navbar-default">
 						<div className="container-fluid">
@@ -61,69 +62,3 @@ class Clients extends Component {
 }
 
 export default Clients;
-
-class ContentTable extends Component {
-	render () {
-		var rows = this.props.data.filter(function(elem) {
-			return !this.props.filter || (
-				this.props.filter && 
-				(
-					elem.firstName.toLowerCase().match(this.props.filter.toLowerCase()) ||
-					elem.lastName.toLowerCase().match(this.props.filter.toLowerCase())
-				)
-			)
-		}.bind(this));
-		return (
-			<table className="table table-striped"> 
-				<thead>
-					<tr>
-						<th></th>
-						<th></th>
-						<th>Last name</th>
-						<th>First name</th>
-						<th>E-mail</th>
-						<th>Open tickets</th>
-						<th>ID of clients</th>
-						<th># of services</th>
-						<th>Status</th>
-					</tr>
-				</thead>
-				<tbody>
-					{
-						rows.map(function(lineData, indexLine) {
-							return (
-								<ContentTableRow
-									key={lineData.clientId}
-									data={lineData}
-									filter={this.props.filterText}
-								/>
-							)
-						}.bind(this))
-					}
-				</tbody>
-			</table>
-		)
-	}
-}
-
-class ContentTableRow extends Component {
-	render () {
-		return (
-			<tr>			
-				<td><input type="checkbox"/></td>
-				<td><img /></td>
-				{
-					Object.keys(this.props.data).map(function(elem, indexElem) {
-						return (
-							<td key={indexElem}> 
-								{
-									this.props.data[elem]
-								}
-							</td>
-						)
-					}.bind(this))
-				}
-			</tr>
-		)
-	}
-}

@@ -6,15 +6,15 @@ class Main extends Component {
 		return (
 			<section className="container-fluid">				
 				<section id="header-site" className="row">
-					<div id="header-logo" className="col-md-2">
+					<div id="header-logo" className="col-sm-2">
 						<h1><Link to="/" activeClassName="active">Home</Link></h1>
 					</div>
-					<div id="" className="col-md-10">
+					<div id="" className="col-sm-10">
 						<h1>{this.props.children.props.route.name}</h1>
 					</div>
 				</section>
 				<section id="body-site" className="row">
-					<section id="nav-menu" className="col-md-2">
+					<section id="nav-menu" className="col-sm-2">
 						<h3 className="title-menu" >Main</h3>
 						<nav>
 							<div className="list-group">
@@ -49,13 +49,10 @@ class Main extends Component {
 							</div>
 						</nav>
 					</section>
-					<section id="content" className="col-md-10">
+					<section id="content" className="col-sm-10">
 						{this.props.children}
 					</section>
 				</section>
-				<footer className="row">
-					<p>(c) 2010 The Example company</p>
-				</footer>
 			</section>			
 		);
 	}
