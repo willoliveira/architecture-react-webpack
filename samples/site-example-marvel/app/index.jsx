@@ -4,30 +4,26 @@ import { render } from "react-dom";
 //routing
 import {Router, Route, IndexRoute, browserHistory} from "react-router";
 //Components
-import Characters 		from "./shared/Characters/Characters.component.jsx";
-import Comics 		from "./components/Comics/Comics.component.jsx";
-import Creators 		from "./components/Creators/Creators.component.jsx";
-import Events 		from "./components/Events/Events.component.jsx";
-import Series 	from "./components/Series/Series.component.jsx";
-import Messenger 	from "./components/messenger/messenger.component.jsx";
-import Reports 		from "./components/reports/reports.component.jsx";
-import Support 		from "./components/support/support.component.jsx";
-import Setup 		from "./components/setup/setup.component.jsx";
-
+import Main 		from "./shared/main/main.component.jsx";
+import Home 		from "./components/home/home.component.jsx";
+import Characters 	from "./components/characters/characters.component.jsx";
+import Comics 		from "./components/comics/comics.component.jsx";
+import Creators 	from "./components/creators/creators.component.jsx";
+import Events 		from "./components/events/events.component.jsx";
+import Series 		from "./components/series/series.component.jsx";
+import Stories 		from "./components/stories/stories.component.jsx";
 //with node server
 render(
 	<Router history={browserHistory}>
 		<Route component={Main}>
-			<Route name="Characters" path="/Characters" component={Characters}/>
-			<Route name="Comics" path="/Comics" component={Comics}/>
-			<Route name="Creators" path="/Creators" component={Creators}/>
-			<Route name="Events" path="/Events" component={Events}/>
-			<Route name="Series" path="/Series" component={Series}/>
-			<Route name="Stories" path="/reports" component={Reports}/>
+			<Route name="Home" path="/" component={Home}/>
+			<Route name="Characters" path="/characters" component={Characters}/>
+			<Route name="Comics" path="/comics" component={Comics}/>
+			<Route name="Creators" path="/creators" component={Creators}/>
+			<Route name="Events" path="/events" component={Events}/>
+			<Route name="Series" path="/series" component={Series}/>
+			<Route name="Stories" path="/stories" component={Stories}/>
 		</Route>
 	</Router>, 
 	document.getElementById('container')
 );
-// <Route path="/cars" component={Car} data={data}/>
-// <Route path="/cars/:id" component={CarDetail} data={data}/>
-// <Route path="/about" component={About}/>
