@@ -21,7 +21,6 @@ var config = {
         ]
     }
 };
-
 // ,
 //     plugins: [
 //         new webpack.optimize.UglifyJsPlugin({
