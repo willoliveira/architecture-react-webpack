@@ -61,31 +61,31 @@
 	
 	var _mainComponent2 = _interopRequireDefault(_mainComponent);
 	
-	var _homeComponent = __webpack_require__(/*! ./components/home/home.component.jsx */ 242);
+	var _homeComponent = __webpack_require__(/*! ./components/home/home.component.jsx */ 236);
 	
 	var _homeComponent2 = _interopRequireDefault(_homeComponent);
 	
-	var _charactersComponent = __webpack_require__(/*! ./components/characters/characters.component.jsx */ 236);
+	var _charactersComponent = __webpack_require__(/*! ./components/characters/characters.component.jsx */ 237);
 	
 	var _charactersComponent2 = _interopRequireDefault(_charactersComponent);
 	
-	var _comicsComponent = __webpack_require__(/*! ./components/comics/comics.component.jsx */ 237);
+	var _comicsComponent = __webpack_require__(/*! ./components/comics/comics.component.jsx */ 238);
 	
 	var _comicsComponent2 = _interopRequireDefault(_comicsComponent);
 	
-	var _creatorsComponent = __webpack_require__(/*! ./components/creators/creators.component.jsx */ 238);
+	var _creatorsComponent = __webpack_require__(/*! ./components/creators/creators.component.jsx */ 239);
 	
 	var _creatorsComponent2 = _interopRequireDefault(_creatorsComponent);
 	
-	var _eventsComponent = __webpack_require__(/*! ./components/events/events.component.jsx */ 239);
+	var _eventsComponent = __webpack_require__(/*! ./components/events/events.component.jsx */ 240);
 	
 	var _eventsComponent2 = _interopRequireDefault(_eventsComponent);
 	
-	var _seriesComponent = __webpack_require__(/*! ./components/series/series.component.jsx */ 240);
+	var _seriesComponent = __webpack_require__(/*! ./components/series/series.component.jsx */ 241);
 	
 	var _seriesComponent2 = _interopRequireDefault(_seriesComponent);
 	
-	var _storiesComponent = __webpack_require__(/*! ./components/stories/stories.component.jsx */ 241);
+	var _storiesComponent = __webpack_require__(/*! ./components/stories/stories.component.jsx */ 242);
 	
 	var _storiesComponent2 = _interopRequireDefault(_storiesComponent);
 	
@@ -27842,7 +27842,73 @@
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _headerComponent = __webpack_require__(/*! ../header/header.component.jsx */ 243);
+	
+	var _headerComponent2 = _interopRequireDefault(_headerComponent);
+	
+	var _footerComponent = __webpack_require__(/*! ../footer/footer.component.jsx */ 244);
+	
+	var _footerComponent2 = _interopRequireDefault(_footerComponent);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Main = function (_Component) {
+	    _inherits(Main, _Component);
+	
+	    function Main() {
+	        _classCallCheck(this, Main);
+	
+	        return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).apply(this, arguments));
+	    }
+	
+	    _createClass(Main, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                null,
+	                _react2.default.createElement(_headerComponent2.default, null),
+	                _react2.default.createElement(
+	                    "section",
+	                    null,
+	                    this.props.children
+	                ),
+	                _react2.default.createElement(_footerComponent2.default, null)
+	            );
+	        }
+	    }]);
+	
+	    return Main;
+	}(_react.Component);
+	
+	exports.default = Main;
+
+/***/ },
+/* 236 */
+/*!************************************************!*\
+  !*** ./app/components/home/home.component.jsx ***!
+  \************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
 	});
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -27859,38 +27925,33 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Main = function (_Component) {
-	  _inherits(Main, _Component);
+	var Home = function (_Component) {
+		_inherits(Home, _Component);
 	
-	  function Main() {
-	    _classCallCheck(this, Main);
+		function Home() {
+			_classCallCheck(this, Home);
 	
-	    return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).apply(this, arguments));
-	  }
+			return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
+		}
 	
-	  _createClass(Main, [{
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement(
-	          "h1",
-	          null,
-	          "Main Page"
-	        ),
-	        this.props.children
-	      );
-	    }
-	  }]);
+		_createClass(Home, [{
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"h1",
+					null,
+					"Home Page"
+				);
+			}
+		}]);
 	
-	  return Main;
+		return Home;
 	}(_react.Component);
 	
-	exports.default = Main;
+	exports.default = Home;
 
 /***/ },
-/* 236 */
+/* 237 */
 /*!************************************************************!*\
   !*** ./app/components/characters/characters.component.jsx ***!
   \************************************************************/
@@ -27942,7 +28003,7 @@
 	exports.default = Characters;
 
 /***/ },
-/* 237 */
+/* 238 */
 /*!****************************************************!*\
   !*** ./app/components/comics/comics.component.jsx ***!
   \****************************************************/
@@ -27994,7 +28055,7 @@
 	exports.default = Comics;
 
 /***/ },
-/* 238 */
+/* 239 */
 /*!********************************************************!*\
   !*** ./app/components/creators/creators.component.jsx ***!
   \********************************************************/
@@ -28046,7 +28107,7 @@
 	exports.default = Creators;
 
 /***/ },
-/* 239 */
+/* 240 */
 /*!****************************************************!*\
   !*** ./app/components/events/events.component.jsx ***!
   \****************************************************/
@@ -28098,7 +28159,7 @@
 	exports.default = Events;
 
 /***/ },
-/* 240 */
+/* 241 */
 /*!****************************************************!*\
   !*** ./app/components/series/series.component.jsx ***!
   \****************************************************/
@@ -28150,7 +28211,7 @@
 	exports.default = Series;
 
 /***/ },
-/* 241 */
+/* 242 */
 /*!******************************************************!*\
   !*** ./app/components/stories/stories.component.jsx ***!
   \******************************************************/
@@ -28202,9 +28263,9 @@
 	exports.default = Stories;
 
 /***/ },
-/* 242 */
+/* 243 */
 /*!************************************************!*\
-  !*** ./app/components/home/home.component.jsx ***!
+  !*** ./app/shared/header/header.component.jsx ***!
   \************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
@@ -28228,30 +28289,505 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Home = function (_Component) {
-		_inherits(Home, _Component);
+	var Header = function (_Component) {
+		_inherits(Header, _Component);
 	
-		function Home() {
-			_classCallCheck(this, Home);
+		function Header() {
+			_classCallCheck(this, Header);
 	
-			return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
+			return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
 		}
 	
-		_createClass(Home, [{
+		_createClass(Header, [{
 			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
-					"h1",
+					"header",
 					null,
-					"Home Page"
+					_react2.default.createElement(
+						"div",
+						{ className: "marvel-logo" },
+						_react2.default.createElement("img", { src: "assets/images/marvel-logo.jpg", alt: "" })
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "" },
+						_react2.default.createElement(
+							"div",
+							{ className: "menu-social" },
+							_react2.default.createElement(
+								"div",
+								{ className: "menu-social-left" },
+								_react2.default.createElement(
+									"ul",
+									{ className: "menu-socials-net" },
+									_react2.default.createElement(
+										"li",
+										{ className: "menu-item" },
+										_react2.default.createElement(
+											"i",
+											null,
+											"face"
+										)
+									),
+									_react2.default.createElement(
+										"li",
+										{ className: "menu-item" },
+										_react2.default.createElement(
+											"i",
+											null,
+											"twitter"
+										)
+									),
+									_react2.default.createElement(
+										"li",
+										{ className: "menu-item" },
+										_react2.default.createElement(
+											"i",
+											null,
+											"youtube"
+										)
+									)
+								)
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "menu-social-right" },
+								_react2.default.createElement(
+									"ul",
+									{ className: "menu-socials-account" },
+									_react2.default.createElement(
+										"li",
+										{ className: "menu-item" },
+										"Marvel mastercard"
+									),
+									_react2.default.createElement(
+										"li",
+										{ className: "menu-item" },
+										_react2.default.createElement(
+											"span",
+											{ className: "bold" },
+											"Marvel insider"
+										),
+										" ",
+										_react2.default.createElement(
+											"span",
+											{ className: "" },
+											"5,200 Points"
+										)
+									),
+									_react2.default.createElement(
+										"li",
+										{ className: "menu-item" },
+										_react2.default.createElement(
+											"i",
+											null,
+											"icon-user"
+										),
+										"Willian"
+									)
+								)
+							)
+						)
+					),
+					_react2.default.createElement("div", { className: "menu-separaca" }),
+					_react2.default.createElement(
+						"div",
+						{ className: "menu-principal" },
+						_react2.default.createElement(
+							"ul",
+							{ className: "menu-socials-net" },
+							_react2.default.createElement(
+								"li",
+								{ className: "menu-item" },
+								"Characters"
+							),
+							_react2.default.createElement(
+								"li",
+								{ className: "menu-item" },
+								"Comics"
+							),
+							_react2.default.createElement(
+								"li",
+								{ className: "menu-item" },
+								"Creators"
+							),
+							_react2.default.createElement(
+								"li",
+								{ className: "menu-item" },
+								"Events"
+							),
+							_react2.default.createElement(
+								"li",
+								{ className: "menu-item" },
+								"Series"
+							),
+							_react2.default.createElement(
+								"li",
+								{ className: "menu-item" },
+								"Stories"
+							),
+							_react2.default.createElement(
+								"li",
+								{ className: "menu-item" },
+								"Comics"
+							)
+						)
+					)
 				);
 			}
 		}]);
 	
-		return Home;
+		return Header;
 	}(_react.Component);
 	
-	exports.default = Home;
+	exports.default = Header;
+
+/***/ },
+/* 244 */
+/*!************************************************!*\
+  !*** ./app/shared/footer/footer.component.jsx ***!
+  \************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Footer = function (_Component) {
+		_inherits(Footer, _Component);
+	
+		function Footer() {
+			_classCallCheck(this, Footer);
+	
+			return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+		}
+	
+		_createClass(Footer, [{
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"footer",
+					null,
+					_react2.default.createElement(
+						"section",
+						{ className: "map-site" },
+						_react2.default.createElement(
+							"div",
+							{ className: "map-site-comics" },
+							_react2.default.createElement(
+								"h3",
+								{ className: "map-title" },
+								"Comics"
+							),
+							_react2.default.createElement(
+								"ul",
+								{ className: "map-site-list" },
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release calendar"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Marvel unlimited"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release Calendar"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release Calendar"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release Calendar"
+								)
+							)
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "map-site-comics" },
+							_react2.default.createElement(
+								"h3",
+								{ className: "map-title" },
+								"Characters"
+							),
+							_react2.default.createElement(
+								"ul",
+								{ className: "map-site-list" },
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release calendar"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Marvel unlimited"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release Calendar"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release Calendar"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release Calendar"
+								)
+							)
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "map-site-comics" },
+							_react2.default.createElement(
+								"h3",
+								{ className: "map-title" },
+								"Kids"
+							),
+							_react2.default.createElement(
+								"ul",
+								{ className: "map-site-list" },
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release calendar"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Marvel unlimited"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release Calendar"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release Calendar"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release Calendar"
+								)
+							)
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "map-site-comics" },
+							_react2.default.createElement(
+								"h3",
+								{ className: "map-title" },
+								"Marvel"
+							),
+							_react2.default.createElement(
+								"ul",
+								{ className: "map-site-list" },
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release calendar"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Marvel unlimited"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release Calendar"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release Calendar"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release Calendar"
+								)
+							)
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "map-site-comics" },
+							_react2.default.createElement(
+								"h3",
+								{ className: "map-title" },
+								"Insider"
+							),
+							_react2.default.createElement(
+								"ul",
+								{ className: "map-site-list" },
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release calendar"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Marvel unlimited"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release Calendar"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release Calendar"
+								),
+								_react2.default.createElement(
+									"li",
+									null,
+									"Release Calendar"
+								)
+							)
+						)
+					),
+					_react2.default.createElement(
+						"section",
+						{ className: "footer-social" },
+						_react2.default.createElement("img", { src: "assets/images/marvel-logo.jpg", alt: "" }),
+						_react2.default.createElement(
+							"ul",
+							null,
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"i",
+									null,
+									"facebook"
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"i",
+									null,
+									"google_plus"
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"i",
+									null,
+									"twitter"
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"i",
+									null,
+									"tumblr"
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"i",
+									null,
+									"youtube"
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"i",
+									null,
+									"pintirest"
+								)
+							)
+						)
+					),
+					_react2.default.createElement(
+						"section",
+						{ className: "terms" },
+						_react2.default.createElement(
+							"ul",
+							null,
+							_react2.default.createElement(
+								"li",
+								null,
+								"Terms of use"
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								"Privacy policy"
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								"Your california privacy rights"
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								"License agreement"
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								"Interest-based ads"
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								"2016 MARVEL"
+							)
+						)
+					)
+				);
+			}
+		}]);
+	
+		return Footer;
+	}(_react.Component);
+	
+	exports.default = Footer;
 
 /***/ }
 /******/ ]);

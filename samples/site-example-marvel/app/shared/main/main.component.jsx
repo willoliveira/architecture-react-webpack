@@ -1,11 +1,16 @@
 import React, {Component} from "react";
+import Header from "../header/header.component.jsx";
+import Footer from "../footer/footer.component.jsx";
 
 class Main extends Component {
 	render() {
 		return (
             <div>
-                <h1>Main Page</h1>
-                {this.props.children}
+                <Header />
+                <section>
+                    {this.props.children}
+                </section>
+                <Footer />
             </div>			
 		);
 	}
