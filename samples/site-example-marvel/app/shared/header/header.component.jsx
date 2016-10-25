@@ -1,11 +1,14 @@
 import React, {Component} from "react";
+import { Link } from "react-router"
 
 class Header extends Component {
 	render() {
 		return (
 			<header>
 				<div className="marvel-logo">
-					<img src="assets/images/marvel-logo.jpg" alt="" />                
+					<Link to="/" activeClassName="active">
+						<img src="assets/images/marvel-logo.jpg" alt="" />
+					</Link>        
 				</div>
             	<div className="">
 					<div className="menu-social">
@@ -28,13 +31,13 @@ class Header extends Component {
                 <div className="menu-separaca"></div>
                 <div className="menu-principal">
                     <ul className="menu-socials-net">
-                        <li className="menu-item">Characters</li>
-                        <li className="menu-item">Comics</li>
-                        <li className="menu-item">Creators</li>
-                        <li className="menu-item">Events</li>
-                        <li className="menu-item">Series</li>
-                        <li className="menu-item">Stories</li>
-                        <li className="menu-item">Comics</li>
+                        <li className="menu-item"><Link to="/characters" activeClassName="active">Characters</Link></li>
+                        <li className="menu-item"><Link to="/comics" activeClassName="active">Comics</Link></li>
+                        <li className="menu-item"><Link to="/creators" activeClassName="active">Creators</Link></li>
+                        <li className="menu-item"><Link to="/events" activeClassName="active">Events</Link></li>
+                        <li className="menu-item"><Link to="/series" activeClassName="active">Series</Link></li>
+                        <li className="menu-item"><Link to="/stories" activeClassName="active">Stories</Link></li>
+                        <li className="menu-item"><Link to="/comics" activeClassName="active">Comics</Link></li>
                     </ul>
                 </div>
         	</header>
