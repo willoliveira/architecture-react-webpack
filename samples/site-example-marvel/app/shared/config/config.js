@@ -1,5 +1,11 @@
 
-class Config {
+const marvel_url_api = "http://gateway.marvel.com/";
 
-    static marvel_url_api
+class Config {
+    
+    static get marvel_url_api() {
+        return marvel_url_api;
+    }    
 }
+
+export default Config;

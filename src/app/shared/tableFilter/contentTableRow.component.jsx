@@ -2,6 +2,9 @@ import React, {Component} from "react";
 
 class ContentTableRow extends Component {
 	render () {
+
+		console.log(this.props["item-component"]);
+
 		return (
 			<tr>			
 				<td><input type="checkbox"/></td>
