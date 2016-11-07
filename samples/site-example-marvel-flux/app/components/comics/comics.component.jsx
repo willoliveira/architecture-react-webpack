@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import ComicsRepository from "../../components/comics/comics.repository.js";
+import ComicsStore from "../../components/comics/comics.store.js";
+import ComicsAction from "../../components/comics/comics.action.js"
 
 import ItemListPaginate from "../../shared/item-list-paginate/item-list-paginate.jsx";
 import CardComics from "../../shared/card-comics/card-comics.jsx"
@@ -10,39 +11,30 @@ class Comics extends Component {
 		super();
 		//limpa
 		this.state = {
-			comics: []
-		}
+			comics: ComicsStore.getAll()
+		};
 		//inicializa o componente
 		this.init();
 	}
 
 	init() {
 		//get comics
-		ComicsRepository.getComics()
-			.then(this.onSuccessGetComics.bind(this))
-			.catch(this.onError.bind(this));
+		ComicsStore.getComics();
 	}
 
-	onSuccessGetComics(response) {
-		console.log(response, this);
-		if (response.data && response.data.data && response.data.data.total > 0) {
-			this.setState({
-				comics: this.state.comics.concat(response.data.data.results),
-				totalItems: response.data.data.total
-			});
-		}
-	}
+	componentDidMount() {
+    	ComicsStore.addChangeListener(this._onChange.bind(this));
+  	}
 
-	nextComics() {
+  	componentWillUnmount() {
+    	ComicsStore.removeChangeListener(this._onChange);
+  	}
 
-	}
-
-	prevComics() {
-		
-	}
-
-	onError(error) {
-		console.log(error);
+	_onChange() {
+		console.log(ComicsStore.getAll());
+		this.setState({
+			comics: ComicsStore.getAll()
+		});
 	}
 
 	render() {
@@ -50,9 +42,12 @@ class Comics extends Component {
 			<section id="comics-list">
 				<h1>Comics</h1>
 				<ItemListPaginate
-					data-list={this.state.comics}
-					total-items={this.state.totalItems}
+					data-list={this.state.comics.list}
+					total-items={this.state.comics.total}
 					item-component={<CardComics/>}
+
+					next-page={ComicsAction.nextPage}
+					prev-page={ComicsAction.prevPage}
 				/>
 			</section>
 		);

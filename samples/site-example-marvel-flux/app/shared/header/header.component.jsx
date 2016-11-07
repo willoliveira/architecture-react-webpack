@@ -37,7 +37,6 @@ class Header extends Component {
                         <li className="menu-item"><Link to="/events" activeClassName="active">Events</Link></li>
                         <li className="menu-item"><Link to="/series" activeClassName="active">Series</Link></li>
                         <li className="menu-item"><Link to="/stories" activeClassName="active">Stories</Link></li>
-                        <li className="menu-item"><Link to="/comics" activeClassName="active">Comics</Link></li>
                     </ul>
                 </div>
         	</header>

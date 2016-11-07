@@ -5,27 +5,21 @@ import Pagination from "../pagination/pagination.jsx"
 
 class ItemListPaginate extends Component {
     
-    constructor() {
-        super();
-        
-    }
-
-    componentDidMount() {
-
-    }
-
-    componentDidUpdate() {
-
-    }
-
     render() {
         
         return (
             <div>
-                <Pagination />
+                <Pagination
+					next-page={this.props["next-page"]}
+					prev-page={this.props["prev-page"]} 
+                />
                 <ItemList
                     items={this.props["data-list"]}
                     item-component={this.props["item-component"]}
+                />
+                <Pagination
+					next-page={this.props["next-page"]}
+					prev-page={this.props["prev-page"]} 
                 />
             </div>
         );

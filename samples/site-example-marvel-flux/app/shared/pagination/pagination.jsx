@@ -5,8 +5,8 @@ class Pagination extends Component {
     render() {
         return (
             <div className="paginate-list">
-                <button type="button">Previous</button>
-                <button type="button">Next</button>
+                <button type="button" onClick={this.props["prev-page"]}>Previous</button>
+                <button type="button" onClick={this.props["next-page"]}>Next</button>
             </div>
         )
     }

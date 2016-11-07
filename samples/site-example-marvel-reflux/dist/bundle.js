@@ -28669,25 +28669,6 @@
 	
 		return Comics;
 	}(_react.Component);
-	// <div className="paginate-list">
-	// 					<button type="button">Previous</button>
-	// 					<button type="button">Next</button>
-	// 				</div>
-	// 				<div className="table-list comics-table-list">
-	// 					{
-	// 						this.state.comics.map(function(item, index) {
-	// 							return (
-	// 								<div className="card-item hq-tile" key={item.id}>
-	// 									<img alt="" src={item.thumbnail.path + "." + item.thumbnail.extension}/>
-	// 									<div className="title-image">
-	// 										<h3>{item.title}</h3> 
-	// 										<p></p>
-	// 									</div>
-	// 								</div>
-	// 							)
-	// 						})
-	// 					}
-	// 				</div>
 	
 	exports.default = Comics;
 
