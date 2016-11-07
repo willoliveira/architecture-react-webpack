@@ -7,7 +7,6 @@ class ItemListPaginate extends Component {
     
     constructor() {
         super();
-        
     }
 
     componentDidMount() {

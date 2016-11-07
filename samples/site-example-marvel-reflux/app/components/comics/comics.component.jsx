@@ -1,13 +1,15 @@
 import React, {Component} from "react";
 import ComicsRepository from "../../components/comics/comics.repository.js";
 
+import Reflux from "reflux";
+
 import ItemListPaginate from "../../shared/item-list-paginate/item-list-paginate.jsx";
-import CardComics from "../../shared/card-comics/card-comics.jsx"
+import CardComics from "../../shared/card-comics/card-comics.jsx";
 
-class Comics extends Component {
+class Comics extends Reflux.Component {
 
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		//limpa
 		this.state = {
 			comics: []
