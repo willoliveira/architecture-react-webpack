@@ -25,6 +25,7 @@ class Comics extends Component {
 	}
 
 	componentDidMount() {
+		
     	ComicsStore.addChangeListener(this._onChange.bind(this));
   	}
 

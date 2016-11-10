@@ -10,6 +10,8 @@ class Comics extends Component {
 	constructor() {
 		super();
 		//limpa
+
+		
 		this.state = {
 			comics: ComicsStore.getAll()
 		};
