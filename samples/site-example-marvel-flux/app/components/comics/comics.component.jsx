@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import ComicsStore from "../../components/comics/comics.store.js";
-import ComicsAction from "../../components/comics/comics.action.js"
+import ComicsStore from "./comics.store.js";
+import ComicsAction from "./comics.action.js"
 
 import ItemListPaginate from "../../shared/item-list-paginate/item-list-paginate.jsx";
 import CardComics from "../../shared/card-comics/card-comics.jsx"

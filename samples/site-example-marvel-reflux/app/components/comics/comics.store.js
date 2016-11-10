@@ -1,11 +1,15 @@
 
 import Reflux from "reflux";
-import ComicsAction from "comics.action.js";
+import ComicsAction from "./comics.action.js";
 
-class TimeStore extends Reflux.Store
-{
-    constructor() {
-        
+var Store = Reflux.createStore({
+    init: function() {
+        this.listenToMany(actions);
+    },
+    onFireBall: function(){
+        // whoooosh!
+    },
+    onMagicMissile: function(){
+        // bzzzzapp!
     }
-
-}
+});
