@@ -4,7 +4,8 @@ Arquitetura feita em React e Webpack
 
 ## Instruções para rodar o site
 
-Instalando as dependencias
+Instalando as dependencias 
+Top
 ```
 npm install
 ```
