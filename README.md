@@ -1,5 +1,5 @@
 # architecture-react-webpack
-Arquitetura feita em React e Webpack
+Arquitetura feita em React, com testes de aplicação de Flux, inicialmente usando Flux puro, e inicio de aplicação de Reflux Está sendo utilizado Webpack como module builder.
 
 
 ## Instruções para rodar o site
